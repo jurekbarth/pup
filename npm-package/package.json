@@ -1,12 +1,12 @@
 {
   "name": "@jurekbarth/pup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Readme",
   "scripts": {
     "postinstall": "node install.js"
   },
   "bin": {
-    "rpgo": "bin/pup"
+    "pup": "bin/pup"
   },
   "repository": {
     "type": "git",
