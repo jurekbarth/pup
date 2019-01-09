@@ -1,0 +1,12 @@
+{
+  "name": "lambda-edge",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@jurekbarth/lambda-edge-auth": "0.0.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@jurekbarth/pup",
+  "version": "0.0.1",
+  "description": "Readme",
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "bin": {
+    "rpgo": "bin/rpgo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurekbarth/pup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jurekbarth/pup/issues"
+  },
+  "homepage": "https://github.com/jurekbarth/pup#readme",
+  "dependencies": {
+    "go-library": "0.0.10"
+  }
+}

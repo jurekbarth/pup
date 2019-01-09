@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Preview Server</title>
+</head>
+
+<body>
+  <h1>Preview Server</h1>
+  <p>Loading...</p>
+  <script>
+    if (window.location.hash) {
+      let str = window.location.hash;
+      str = str.replace('#id_token=', '')
+      str = str.slice(0, str.indexOf('&access_token='));
+      document.cookie = "pupauthcookie=" + str + ";path=/";
+      let redirect = window.location.hash;
+      redirect = redirect.slice(redirect.indexOf("&state=") + 7);
+      window.location = redirect;
+    }
+  </script>
+</body>
+
+</html>

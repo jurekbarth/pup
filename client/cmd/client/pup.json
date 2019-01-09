@@ -1,0 +1,50 @@
+{
+	"version": 1,
+	"customer-code": "bio",
+	"project": "test-project",
+	"root": "./dist",
+	"users": [
+		{
+			"username": "interal-user",
+			"password": "supersecret",
+			"groups": [
+				"internal-group"
+			]
+		},
+		{
+			"username": "external-user",
+			"password": "supersecret",
+			"groups": [
+				"external-group"
+			]
+		}
+	],
+	"rules": [
+		{
+			"/*/resources/**/*": {
+				"group-permissions": [
+					"public"
+				]
+			}
+		},
+		{
+			"/master/**/*": {
+				"group-permissions": [
+					"external-group"
+				]
+			}
+		},
+		{
+			"/**/*": {
+				"group-permissions": [
+					"dev",
+					"internal-group"
+				]
+			}
+		}
+	],
+	"aws-profile": "personal",
+	"aws-bucket": "testing-zip-bucket",
+	"aws-region": "eu-central-1",
+	"aws-dynamodb-logs-table": "testing-logs-table"
+}

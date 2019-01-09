@@ -1,0 +1,11 @@
+github.com/aws/aws-sdk-go v1.16.14 h1:v/Jc1ryxAa6F9uPwXl2RSuFsGC4Iai8PEiSDP/cprHc=
+github.com/aws/aws-sdk-go v1.16.14/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
+github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af h1:pmfjZENx5imkbgOkpRUYLnmbU7UEFbjtDA2hxJ1ichM=
+github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
+github.com/jurekbarth/getenv v0.0.0-20190107132224-044657b2ece4 h1:RvaTeY86pUVciWo8Msc5uBE076x1U8h9BOlDuIYBM1A=
+github.com/jurekbarth/getenv v0.0.0-20190107132224-044657b2ece4/go.mod h1:m5duq1dj+VdL64KaV1kRYDRDU3gXmqzlT3leePlVvDE=
+github.com/jurekbarth/pup v0.0.0-20190106211641-b375df6f5867 h1:iANeO+jeaIQ81l8aWaxwXEVVkONcGcmot9utfbuGGb8=
+github.com/jurekbarth/pup/usermanager v0.0.0-20190107065339-a38702a1f9fb h1:84PGvaRufT5TbWHCCL22CZIh0p26aRTnO+H0aA7sZBs=
+github.com/jurekbarth/pup/usermanager v0.0.0-20190107065339-a38702a1f9fb/go.mod h1:qUupmqiSQ6S1omRDigkxUMcwzzzBvx25OmyJDrg23vs=
+github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

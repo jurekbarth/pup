@@ -1,0 +1,5 @@
+/client/cmd/client/main
+.DS_Store
+/worker/main
+/worker/output
+/client/dist

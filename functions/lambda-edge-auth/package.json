@@ -1,0 +1,21 @@
+{
+  "name": "@jurekbarth/lambda-edge-auth",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "setupTest": "node ./tests/setupTests",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@jurekbarth/pathmatcher": "0.0.3",
+    "jsonwebtoken": "^8.4.0",
+    "jwk-to-pem": "^2.0.1"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
