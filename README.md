@@ -77,7 +77,7 @@ The worker is a docker container that runs in AWS Fargate. The worker is respons
   "r": [
     {
       "/**/*": {
-        "groups": [
+        "group-permissions": [
           "public"
         ]
       }
