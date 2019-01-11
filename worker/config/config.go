@@ -1,8 +1,6 @@
 package config
 
 import (
-	"fmt"
-
 	"github.com/jurekbarth/getenv"
 	"github.com/jurekbarth/pup/worker/internal/validate"
 	"github.com/pkg/errors"
@@ -78,7 +76,6 @@ func (c *Config) Validate() error {
 func ReadConfig() (*Config, error) {
 	var c Config
 	getenv.Process("PUP_", &c)
-	fmt.Println(c)
 	if err := c.Validate(); err != nil {
 		return nil, errors.Wrap(err, "validating")
 	}

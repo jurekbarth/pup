@@ -1,6 +1,7 @@
 package app
 
 import (
+	"fmt"
 	"github.com/jurekbarth/pup/worker"
 	"github.com/jurekbarth/pup/worker/event"
 	"github.com/jurekbarth/pup/worker/internal/project"
@@ -91,6 +92,10 @@ func Run() error {
 		Error: nil,
 	})
 	pConfig, dConfig, err := project.Read(w)
+	fmt.Println("############ pConfig ############")
+	fmt.Println(pConfig)
+	fmt.Println("############ dConfig ############")
+	fmt.Println(dConfig)
 	if err != nil {
 		w.Events.Emit(event.Event{
 			ID:    id,
@@ -304,6 +309,8 @@ func Run() error {
 		Value: "upload started",
 		Error: nil,
 	})
+	fmt.Println("############ uploadDestination ############")
+	fmt.Println(uploadDestination)
 	err = s3.Upload(w, uploadDestination)
 	if err != nil {
 		w.Events.Emit(event.Event{

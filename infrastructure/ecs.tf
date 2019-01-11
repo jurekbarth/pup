@@ -76,7 +76,7 @@ resource "aws_ecs_task_definition" "worker" {
   {
     "name": "worker",
     "memory": 300,
-    "image": "docker.io/jurekbarth/worker:v0.0.1",
+    "image": "docker.io/jurekbarth/worker:v0.0.4",
     "environment": [
       {
         "name": "PUP_DOWNLOAD_DIR",
