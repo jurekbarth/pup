@@ -14,6 +14,9 @@ import (
 	"github.com/jurekbarth/pup/worker/platform/sqs"
 	"github.com/jurekbarth/pup/worker/reporter"
 	"github.com/pkg/errors"
+	"time"
+	"github.com/jurekbarth/pup/worker/internal/try"
+	awsSQS "github.com/aws/aws-sdk-go/service/sqs"
 )
 
 func compareRules(dbRuleSet []map[string]dynamodb.Rule, configRuleSet []map[string]project.Rule) bool {
@@ -36,7 +39,15 @@ func compareRules(dbRuleSet []map[string]dynamodb.Rule, configRuleSet []map[stri
 // Run the steps
 func Run() error {
 	_, w, err := start()
-	sqsMessage, err := sqs.GetSqsMessage(w)
+	var sqsMessage *awsSQS.ReceiveMessageOutput
+	err = try.Do(func(attempt int) (bool, error) {
+		var err error
+		sqsMessage, err = sqs.GetSqsMessage(w)
+		if err != nil {
+			time.Sleep(5 * time.Second)
+		}
+		return attempt < 10, err
+	})
 	if err != nil {
 		return err
 	}
